@@ -1,0 +1,38 @@
+@import "default.css";
+.BtnRed{
+    border-radius: 25px;
+    width: 40%;
+    margin: 10px auto ;
+    font-weight: 600;
+    display: inline-block;
+}
+.BtnPurple{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 100%;
+    font-weight: 600;
+    display: inline-block;
+}
+#frmProfileSection img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+#frmProfileSection{
+    text-align: center;
+}
+#frmProfileSection button{
+    display: block;
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 25px;
+}
+
+#txtDescription{
+    resize: none;
+    height: 200px;
+}
+#hiddenImgUploader,#hiddenSubmit{
+    display: none;
+}

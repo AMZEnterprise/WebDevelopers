@@ -1,0 +1,29 @@
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+    background: -webkit-linear-gradient(315deg, hsla(279.96, 94.26%, 43.61%, 1) 0%, hsla(279.96, 94.26%, 43.61%, 0) 70%), -webkit-linear-gradient(65deg, hsla(221.55, 90.72%, 41.52%, 1) 10%, hsla(221.55, 90.72%, 41.52%, 0) 80%), -webkit-linear-gradient(135deg, hsla(175.71, 91.58%, 49.06%, 1) 15%, hsla(175.71, 91.58%, 49.06%, 0) 80%), -webkit-linear-gradient(205deg, hsla(322.94, 95.29%, 48.48%, 1) 100%, hsla(322.94, 95.29%, 48.48%, 0) 70%);
+    background: linear-gradient(135deg, hsla(279.96, 94.26%, 43.61%, 1) 0%, hsla(279.96, 94.26%, 43.61%, 0) 70%), linear-gradient(25deg, hsla(221.55, 90.72%, 41.52%, 1) 10%, hsla(221.55, 90.72%, 41.52%, 0) 80%), linear-gradient(315deg, hsla(175.71, 91.58%, 49.06%, 1) 15%, hsla(175.71, 91.58%, 49.06%, 0) 80%), linear-gradient(245deg, hsla(322.94, 95.29%, 48.48%, 1) 100%, hsla(322.94, 95.29%, 48.48%, 0) 70%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+/*======================================================
+                Project Form Start
+======================================================*/
+.InvalidValueClass{
+    box-shadow: 0px 0px 10px 3px red;
+}
+
+
+/*======================================================
+                Project Form End
+======================================================*/

@@ -1,0 +1,86 @@
+@import "default.css";
+.BtnRed{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 40%;
+    font-weight: 600;
+    display: inline-block;
+}
+.BtnPurple{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 40%;
+    font-weight: 600;
+    display: inline-block;
+}
+/*================== Comments  Start ====================*/
+.CommentCard {
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.CommentCardRight {
+    display: inline-block;
+    width: 20%;
+    float: right;
+}
+
+.CommentCardRight img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-top: 25%;
+}
+
+.CommentCardLeft {
+    display: inline-block;
+    width: 80%;
+    float: left;
+    padding: 10px;
+}
+
+.CommentCardLeft ul {
+    list-style: none;
+    color: var(--gray);
+}
+
+.CommentCardLeft ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.CommentCardLeft p {
+    margin-top: 20px;
+}
+
+.btnAnswer {
+    float: left;
+    padding: 10px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: transparent;
+    border: 2px solid var(--purple);
+    color: var(--purple);
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btnAnswer:hover {
+    background-color: var(--purple);
+    color: white;
+    border-color: var(--purple);
+}
+
+.Comments ul {
+    list-style: none;
+}
+.UserComment{
+    background-color: rgb(250, 250, 250);
+}
+.AdminComment{
+    background-color: rgb(240, 240, 230);
+}
+/*================== Comments  End ====================*/

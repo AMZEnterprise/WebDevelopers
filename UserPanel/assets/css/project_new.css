@@ -1,0 +1,44 @@
+@import "default.css";
+.BtnRed{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 40%;
+    font-weight: 600;
+    display: inline-block;
+}
+.BtnPurple{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 40%;
+    font-weight: 600;
+    display: inline-block;
+}
+#hiddenFileUploader{
+    display: none;
+}
+#submitAlert{
+    background-color: var(--purple);
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    display: none;
+}
+#submitAlert button{
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+#submitAlert button:hover{
+    color: var(--red) !important;
+}
+#submitAlert p{
+    display: inline-block;
+}
+
+.showAlert{
+    display: block !important;
+}

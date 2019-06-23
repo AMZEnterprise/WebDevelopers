@@ -1,0 +1,221 @@
+/*======================================================
+                Top Background Start
+======================================================*/
+#topBackground{
+    background-color: #263238;
+    height: 100%;
+}
+#logo{
+    padding-top: 100px;
+}
+.bloc-logo {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 170px;
+}
+    
+.bloc-logo canvas,
+.bloc-logo .logo-mask {
+    display: block;
+    width: 700px;
+    height: 400px;
+}
+
+.bloc-logo .logo-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 700px;
+    background-image: url('../image/logoGradient.png');
+    text-indent: -9999px;
+}
+
+
+
+/*======================================================
+                Top Background End
+======================================================*/
+
+
+
+
+/*======================================================
+                Project Infos Start
+======================================================*/
+#projectInfo{
+    background-color: rgb(143, 185, 219);
+    margin-top: 100px;
+}
+#projImg{
+    padding-left:0 !important;
+}
+/*======================================================
+                Project Infos End
+======================================================*/
+
+
+
+/*======================================================
+                Services Start
+======================================================*/
+.ServiceCard{
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 2px rgba(107, 107, 107, 0.651);
+    height: 300px;
+}
+
+.ServiceCard:hover .ServiceCardHeader span{
+    transform: scale(1.1,1.1);
+}
+
+.ServiceCardHeader{
+    height:100px;
+    padding: 15px;
+    background-color: #705ce6;
+    color: white;
+}
+
+.ServiceCardHeader h4{
+    float: right;
+}
+.ServiceCardHeader span{
+    float: left;
+    font-size: 40px;
+    transition: all 1s ease-in-out;
+}
+
+.ServicesCardBody{
+    padding: 15px;
+    
+}
+
+/*======================================================
+                Services End
+======================================================*/
+
+
+
+/*======================================================
+                Our Qualifications Start
+======================================================*/
+#ourQualifications{
+    background-color: rgb(12, 194, 170);
+    margin-top: 100px;
+}
+
+#ourQualifications span{
+    color :rgb(197, 35, 57);
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 2px;
+    font-size: 20px;
+}
+
+
+/*======================================================
+                Our Qualifications End
+======================================================*/
+
+/*======================================================
+                Project Examples Start
+======================================================*/
+#projectExamples{
+    background-color: aquamarine;
+    margin-top: 150px;
+}
+
+
+.projectExamplesImgContainer{
+    overflow: hidden;
+    height: 300px;
+    width:100% !important;
+}
+
+.projectExamplesImgContainer img{
+    height: 300px;
+    width:100% !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.projectExamplesImgContainer img:hover{
+    transform:scale(1.5,1.5);
+}
+
+/*======================================================
+                Project Examples End
+======================================================*/
+
+
+
+
+
+
+
+/*======================================================
+                Images Of Team Start
+======================================================*/
+#imageOfTeam{
+    background-color: rgb(255, 255, 255);
+}
+.imgOverlayContainer {
+    position: relative;
+    width: 50%;
+    right: 25%;
+    box-shadow: 2px 2px 20px 2px rgba(107, 107, 107, 0.651);
+  }
+  
+  .image {
+    display: block;
+    width: 100%;
+    /*height: auto;*/
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(34, 115, 165, 0.308);
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+  
+  .imgOverlayContainer:hover .overlay {
+    bottom: 0;
+    height: 100%;
+  }
+  
+  .txt {
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+
+
+
+/*======================================================
+                Slider Start
+======================================================*/
+#slider{
+    background-color: red;
+}
+
+
+
+
+/*======================================================
+                Slider Start
+======================================================*/
+
+

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>پنل کاربری</title>
+    <!-------------------------------Favicon-------------------------------------->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-------------------------------FontAwsome-------------------------------------->
+    <link rel="stylesheet" href="assets/css/lib/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <!-------------------------------Slick Slider-------------------------------------->
+    <link rel="stylesheet" href="assets/css/lib/slick.css">
+    <link rel="stylesheet" href="assets/css/lib/slick-theme.css">
+
+    <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/lib/typed.min.js"></script>
+
+
+    <!-------------------------------Bootstarp-------------------------------------->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+
+    <!-------------------------------AOS : Scroll hide and show effects-------------------------------------->
+    <link rel="stylesheet" href="assets/css/lib/aos.css">
+    <script src="assets/js/lib/aos.js"></script>
+
+    <script src="assets/js/lib/smoothScroll.js"></script>
+</head>
+
+<body>
+    <nav id="sidebar">
+        <div id="sidebarHeader">
+            <img src="assets/images/breadcrumb_background.jpg" alt="" id="userProfile">
+            <p id="userName">نام کاربری</p>
+            <a href="profile.html" id="btnEditUser"><span
+                    class="fa fa-user-edit"></span></a>
+            <a href="../UI/index.html" id="btnExit"><span>بازگشت به سایت</span><span
+                    class="fa fa-angle-left ml-2"></span></a>
+        </div>
+        <div id="sidebarMain">
+            <ul id="sidebarMenu">
+                <li>
+                    <a href="#"><span class="fa fa-chart-bar mx-3"></span><span>پیشخوان</span></a>
+                </li>
+                <li class="submenuLi">
+                    <a href="#">
+                        <span class="fa fa-pen mx-3"></span>
+                        <span>پروژه ها</span>
+                        <span class="fa fa-angle-down submenuToggler"></span>
+                    </a>
+                    <ul class="submenu">
+                        <li><a href="project_new.html">سفارش جدید</a></li>
+                        <li><a href="project_all.html">پروژه های قبلی</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="support.html"><span class="fa fa-users mx-3"></span><span>پشتیبانی</span></a>
+                </li>
+            </ul>
+        </div>
+        <div id="sidebarFooter">
+            <a href="#">Powered By AMZ Enterprise CMS</a>
+        </div>
+    </nav>
+    <section id="main">
+        <nav id="topNavbar" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="btn nav-link text-white px-3" id="btnSidebarToggler" title="تغییر منوی کناری">
+                            <span class="fa fa-bars"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="frmSearch">
+                            <div class="input-group">
+                                <input class="form-control ml-2" type="search" placeholder="دنبال چه چیزی هستید ؟"
+                                    aria-label="Search">
+                                <button class="BtnRed my-2 my-sm-0 input-group-text" type="submit"><span
+                                        class="fa fa-search"></span></button>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="nav-item">
+                        <a class="navbar-brand ml-0" href="#">
+                            <sapn id="lblPanelName">پنل کاربری وبسایت توسعه دهندگان وب</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <div class="row">
+                        <div class="col-6 mt-3">
+                            <div class="panelCard">
+                                <div class="panelCardHeader">
+                                    <div class="panelCardHeaderR">
+                                        <p class="h5">در یک نگاه</p>
+                                    </div>
+                                    <div class="panelCardHeaderL">
+                                        <span class="fa fa-angle-down panelCardToggle"></span>
+                                    </div>
+                                </div>
+                                <div class="panelCardContent">
+                                    <div class="panelCardMain">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum error porro
+                                            ipsam, omnis nobis illum tempora accusamus eius ex rem atque! Facilis
+                                            praesentium fugit est excepturi reiciendis optio omnis facere.
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+                                            perferendis velit corporis impedit debitis, sapiente quo sed expedita,
+                                            placeat quas tempore atque, ut eos inventore accusamus cupiditate!
+                                            Suscipit, esse perferendis.
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+                                            reprehenderit facere impedit? Voluptatibus harum eveniet, minus aspernatur
+                                            natus non sequi ut ipsam quisquam ab est. Error, nulla quo? Nobis, ex.
+                                        </p>
+                                    </div>
+                                    <div class="panelCardFooter">
+                                        <p class="h6">فوتر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-6 mt-3">
+                            <div class="panelCard">
+                                <div class="panelCardHeader">
+                                    <div class="panelCardHeaderR">
+                                        <p class="h5">فعالیت ها</p>
+                                    </div>
+                                    <div class="panelCardHeaderL">
+                                        <span class="fa fa-angle-down panelCardToggle"></span>
+                                    </div>
+                                </div>
+                                <div class="panelCardContent">
+                                    <div class="panelCardMain">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum error porro
+                                            ipsam, omnis nobis illum tempora accusamus eius ex rem atque! Facilis
+                                            praesentium fugit est excepturi reiciendis optio omnis facere.
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+                                            perferendis velit corporis impedit debitis, sapiente quo sed expedita,
+                                            placeat quas tempore atque, ut eos inventore accusamus cupiditate!
+                                            Suscipit, esse perferendis.
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+                                            reprehenderit facere impedit? Voluptatibus harum eveniet, minus aspernatur
+                                            natus non sequi ut ipsam quisquam ab est. Error, nulla quo? Nobis, ex.
+                                        </p>
+                                    </div>
+                                    <div class="panelCardFooter">
+                                        <p class="h6">فوتر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mt-3">
+                            <div class="panelCard">
+                                <div class="panelCardHeader">
+                                    <div class="panelCardHeaderR">
+                                        <p class="h5">پیش نویس ها</p>
+                                    </div>
+                                    <div class="panelCardHeaderL">
+                                        <span class="fa fa-angle-down panelCardToggle"></span>
+                                    </div>
+                                </div>
+                                <div class="panelCardContent">
+                                    <div class="panelCardMain">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum error porro
+                                            ipsam, omnis nobis illum tempora accusamus eius ex rem atque! Facilis
+                                            praesentium fugit est excepturi reiciendis optio omnis facere.
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+                                            perferendis velit corporis impedit debitis, sapiente quo sed expedita,
+                                            placeat quas tempore atque, ut eos inventore accusamus cupiditate!
+                                            Suscipit, esse perferendis.
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+                                            reprehenderit facere impedit? Voluptatibus harum eveniet, minus aspernatur
+                                            natus non sequi ut ipsam quisquam ab est. Error, nulla quo? Nobis, ex.
+                                        </p>
+                                    </div>
+                                    <div class="panelCardFooter">
+                                        <p class="h6">فوتر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6 mt-3">
+                            <div class="panelCard">
+                                <div class="panelCardHeader">
+                                    <div class="panelCardHeaderR">
+                                        <p class="h5">اخبار و رویداد ها</p>
+                                    </div>
+                                    <div class="panelCardHeaderL">
+                                        <span class="fa fa-angle-down panelCardToggle"></span>
+                                    </div>
+                                </div>
+                                <div class="panelCardContent">
+                                    <div class="panelCardMain">
+                                        <p>
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum error porro
+                                            ipsam, omnis nobis illum tempora accusamus eius ex rem atque! Facilis
+                                            praesentium fugit est excepturi reiciendis optio omnis facere.
+                                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tenetur
+                                            perferendis velit corporis impedit debitis, sapiente quo sed expedita,
+                                            placeat quas tempore atque, ut eos inventore accusamus cupiditate!
+                                            Suscipit, esse perferendis.
+                                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
+                                            reprehenderit facere impedit? Voluptatibus harum eveniet, minus aspernatur
+                                            natus non sequi ut ipsam quisquam ab est. Error, nulla quo? Nobis, ex.
+                                        </p>
+                                    </div>
+                                    <div class="panelCardFooter">
+                                        <p class="h6">فوتر</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/default.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+
+</html>

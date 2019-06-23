@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fa-IR" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>پنل کابری - ارتباط با واحد پشتیبانی</title>
+    <!-------------------------------Favicon-------------------------------------->
+    <link rel="shortcut icon" href="assets/images/favicon.png">
+
+    <!-------------------------------FontAwsome-------------------------------------->
+    <link rel="stylesheet" href="assets/css/lib/all.min.css">
+
+    <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/support.css">
+    <!-------------------------------Slick Slider-------------------------------------->
+    <link rel="stylesheet" href="assets/css/lib/slick.css">
+    <link rel="stylesheet" href="assets/css/lib/slick-theme.css">
+
+    <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
+    <script src="assets/js/lib/typed.min.js"></script>
+
+
+    <!-------------------------------Bootstarp-------------------------------------->
+    <script src="assets/js/lib/bootstrap.min.js"></script>
+
+    <!-------------------------------AOS : Scroll hide and show effects-------------------------------------->
+    <link rel="stylesheet" href="assets/css/lib/aos.css">
+    <script src="assets/js/lib/aos.js"></script>
+
+    <script src="assets/js/lib/smoothScroll.js"></script>
+</head>
+
+<body>
+    <section id="main">
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 mt-5">
+                    <div class="row">
+
+                        <div class="col-12 mt-3">
+                            <div class="panelCard">
+                                <div class="panelCardHeader">
+                                    <div class="panelCardHeaderR">
+                                        <p class="h5">ارتباط با واحد پشتیبانی</p>
+                                    </div>
+                                    <div class="panelCardHeaderL">
+                                        <span class="fa fa-angle-down panelCardToggle"></span>
+                                    </div>
+                                </div>
+                                <div class="panelCardContent">
+                                    <div class="panelCardMain">
+                                        <form action="" id="frmSendTicket">
+                                            <div class="form-group">
+                                                <label for="selTicketTitle">عنوان</label>
+                                                <select name="" id="selTicketTitle" class="custom-select">
+                                                    <option value="0">عنوان مشکل خود را از لیست انتخاب کنید</option>
+                                                    <option value="1">باگ در پروژه</option>
+                                                    <option value="2">عدم تطابق پروژه با نیاز شما</option>
+                                                    <option value="3">عدم تایید پروژه</option>
+                                                    <option value="4">دیگر</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group" id="divOtherTicketTitle">
+                                                <label for="inpTicketTitle">عنوان دلخواه خود را وارد کنید</label>
+                                                <input type="text" class="form-control" id="inpTicketTitle">
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="selProject">انتخاب پروژه</label>
+                                                <select name="" id="selProject" class="custom-select">
+                                                    <option value="">پروژه من</option>
+                                                    <option value="">پروژه من</option>
+                                                    <option value="">پروژه من</option>
+                                                    <option value="">پروژه من</option>
+                                                    <option value="">پروژه من</option>
+                                                    <option value="">پروژه من</option>
+                                                    <option value="">پروژه من</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="txtdescription">مشکل خود را مطرح کنید</label>
+                                                <textarea name="" id="txtdescription"
+                                                    class="form-control py-2 rounded-0" cols="30" rows="7"
+                                                    placeholder="توضیحات کامل در مورد مشکل پیش آمده را مطرح کنید"></textarea>
+                                            </div>
+                                            <div class="form-group text-center">
+                                                <input type="submit" class="BtnRed" value="ارسال">
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="panelCardFooter">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-12 mt-3">
+                            <div class="panelCard">
+                                <div class="panelCardHeader">
+                                    <div class="panelCardHeaderR">
+                                        <p class="h5">سوالات مطرح شده از قبل</p>
+                                    </div>
+                                    <div class="panelCardHeaderL">
+                                        <span class="fa fa-angle-down panelCardToggle"></span>
+                                    </div>
+                                </div>
+                                <div class="panelCardContent">
+                                    <div class="panelCardMain">
+                                        <table class="table table-responsive text-center" id="tblAllTickets">
+                                            <tr>
+                                                <th><span class="fa fa-sort"></span></th>
+                                                <th>عنوان</th>
+                                                <th>پروژه مورد نظر</th>
+                                                <th>توضیحات</th>
+                                                <th>وضعیت</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>
+                                                    <a href="#">باگ در پروژه</a>
+                                                </td>
+                                                <td>
+                                                    Lorem ipsum dolor, sit
+                                                </td>
+                                                <td>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+                                                    est,
+                                                    vel quo dignissimos eveniet ullam veniam autem. Quis veritatis
+                                                    illo
+                                                    similique sit perferendis? Asperiores impedit quibusdam magni
+                                                    incidunt veritatis voluptates.
+                                                </td>
+                                                <td><span class="lblStatusOpen"><span class="fa fa-spinner fa-spin"></span></span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>
+                                                    <a href="#">باگ در پروژه</a>
+                                                </td>
+                                                <td>
+                                                    Lorem ipsum dolor, sit
+                                                </td>
+                                                <td>
+                                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit
+                                                    est,
+                                                    vel quo dignissimos eveniet ullam veniam autem. Quis veritatis
+                                                    illo
+                                                    similique sit perferendis? Asperiores impedit quibusdam magni
+                                                    incidunt veritatis voluptates.
+                                                </td>
+                                                <td><span class="lblStatusClosed"><span class="fa fa-check"></span></span>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="panelCardFooter">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/default.js"></script>
+    <script src="assets/support.js"></script>
+</body>
+
+</html>

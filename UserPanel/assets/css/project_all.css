@@ -1,0 +1,26 @@
+@import "default.css";
+.lblStatusDone{
+    font-weight: 700;
+    color: var(--green);
+}
+.lblStatusUnderDevelopment{
+    font-weight: 700;
+    color: var(--blue);
+}
+.lblStatusRejected{
+    font-weight: 700;
+    color: var(--red);
+}
+
+table th:nth-child(1){
+    width: 10%;
+}
+table th:nth-child(2){
+    width: 35%;
+}
+table th:nth-child(3){
+    width: 50%;
+}
+table th:nth-child(4){
+    width: 5%;
+}

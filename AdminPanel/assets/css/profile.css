@@ -1,0 +1,39 @@
+/*==========================================
+            Top Label End
+==========================================*/
+#topLabel{
+    background: rgb(172, 4, 158) !important;
+}
+
+/*==========================================
+            Top Label End
+==========================================*/
+
+
+
+/*==========================================
+            Form Start
+==========================================*/
+#Form .row{
+    background: rgb(85, 84, 84) !important;
+}
+#profileImage{
+    background-color: rgb(163, 157, 157);
+    height:200px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 1px rgb(131, 131, 131);
+    border-radius: 5px;
+}
+
+#profileImage img{
+    width: 100%;
+    height: 100%;
+}
+
+.validationError{
+    box-shadow: 0 0 15px 2px rgb(255, 4, 58);
+}
+/*==========================================
+            Form End
+==========================================*/

@@ -1,0 +1,264 @@
+/*------------------------Basic Start------------------------*/
+:root {
+    --purple: rgb(149, 47, 231);
+    --red: rgb(219, 55, 72);
+    --black: rgb(52, 58, 64);
+    --dark: rgb(53, 53, 53);
+    --gray: rgba(206, 206, 206, 0.39);
+    --yellow: rgb(255, 174, 0);
+    --orange: rgb(255, 72, 0);
+    --blue: rgb(0, 110, 255);
+    --green: rgb(0, 255, 106);
+}
+
+@font-face {
+    font-family: "BNazanin";
+    src: url("font/BNazanin.eot") format(eot),
+        url("font/BNazanin.ttf") format(ttf),
+        url("font/BNazanin.woff") format(woff);
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: BNazanin !important;
+}
+
+/*------------------------Basic End------------------------*/
+
+/*======================================================
+                   Main Panel Start
+======================================================*/
+.post {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgb(235, 232, 232);
+}
+
+.postHeader {
+    width: 100%;
+}
+
+.postHeader ul {
+    list-style-type: none;
+    color: rgb(100, 100, 100);
+}
+
+.postHeader ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.postHeader img {
+    width: 100%;
+}
+
+.postBody {
+    margin-bottom: 10px;
+    padding: 20px;
+}
+
+.postFooter {
+    border-top: 1px solid rgb(223, 223, 223);
+    padding-top: 20px;
+}
+
+.postFooter ul {
+    list-style-type: none;
+    float: left;
+}
+
+.postFooter ul li {
+    display: inline-block;
+}
+
+#comments {
+    margin-top: 100px;
+}
+
+.comment{
+    box-shadow: 0 0 5px 1px rgb(235, 232, 232);
+    margin-top: 20px;
+    border-radius: 5px;
+}
+.commentHeader {
+    padding: 10px 10px 0 10px;
+}
+
+.commentHeader ul {
+    list-style-type: none;
+}
+
+.commentHeader ul li {
+    display: inline-block;
+}
+
+.commentHeader ul li:nth-child(2) {
+    margin-right: 20px;
+}
+
+.commentBody {
+    padding: 10px 30px;
+    width: 100%;
+}
+
+.commentBodyRight {
+    float: right;
+    width: 20%;
+}
+
+.commentBodyLeft {
+    float: left;
+    width: 80%;
+}
+
+.commentBody img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.commentFooter {
+    clear: both;
+    padding: 20px;
+}
+
+.commentLikes {
+    display: inline-block;
+    font-size: 10px;
+}
+.commentLikes button:hover{
+    cursor: pointer;
+}
+
+.commentLikeCount{
+    border: 3px solid var(--black);
+    color:white;
+    padding : 1px 10px;
+    text-align: center;
+    background-color: var(--green);
+}
+.commentDislikeCount{
+    border: 3px solid var(--black);
+    color:white;
+    padding : 1px 10px;
+    text-align: center;
+    background-color: var(--red);
+}
+
+/*------------------------Left Panel------------------------*/
+
+.mainpanelLeft{
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgb(235, 232, 232);
+}
+
+.catHeader{
+    padding: 5px 0;
+    background: var(--dark);
+    color: white;
+    text-align: center;
+}
+
+.search .input-group-text{
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+
+}
+.search .input-group-text:hover{
+    background-color: rgb(211, 210, 210);
+}
+.search a{
+    color: red;
+    text-decoration: none;
+}
+.smPosts{
+    border-radius: 5px;
+    border: 2px solid var(--dark);
+}
+.smPost {
+    color: black;
+    display: inline-block;
+    width: 100%;
+    background-color: rgb(243, 243, 243);
+    height: 100px;
+}
+
+.smPost:hover {
+    color: var(--red);
+}
+
+.smPostRight {
+    float: right;
+    width: 30%;
+    height: 100px;
+}
+
+.smPostRight img {
+    width: 100%;
+    height: 100px;
+}
+
+.smPostLeft {
+    float: left;
+    width: 70%;
+    padding: 0 20px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.socialMediaLinks{
+    border-radius: 5px;
+    border:2px solid var(--dark);
+}
+
+.socialMediaLinks ul{
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.socialMediaLinks ul li{
+    display: inline-block;
+    font-size: 30px;
+    width: 50px;
+    transition: all 0.3s ease-in-out;
+}
+.socialMediaLinks ul li:hover{
+    background-color: rgb(211, 210, 210);
+}
+
+.socialMediaLinks ul li:nth-child(1) a{
+    color: var(--black);
+}
+.socialMediaLinks ul li:nth-child(2) a{
+    color: var(--blue);
+}
+.socialMediaLinks ul li:nth-child(3) a{
+    color: rgb(128, 8, 128);
+}
+.socialMediaLinks ul li:nth-child(4) a{
+    color: rgb(15, 15, 197);
+}
+.links{
+    border:2px solid var(--dark);
+    border-radius: 5px;
+}
+
+.links ul{
+    list-style-type: none;
+    margin-top: 10px;
+}
+.links ul a{
+    color: black;
+    text-decoration: none;
+}
+.links ul a:hover{
+    border-bottom: 1px dotted black;
+}
+
+
+/*======================================================
+                   Main Panel End
+======================================================*/

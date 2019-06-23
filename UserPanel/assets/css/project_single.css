@@ -1,0 +1,44 @@
+@import "default.css";
+.BtnRed{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 40%;
+    font-weight: 600;
+    display: inline-block;
+}
+.BtnPurple{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 40%;
+    font-weight: 600;
+    display: inline-block;
+}
+#hiddenFileUploader ,#hiddenFileDownloader{
+    display: none;
+}
+#projectStatus{
+    background-color: var(--dark);
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+#projectStatus span:nth-child(1){
+    font-weight: 600;
+}
+#projectStatus span:nth-child(2){
+    margin-right: 10px;
+}
+
+
+.lblStatusDone{
+    font-weight: 700;
+    color: var(--green);
+}
+.lblStatusUnderDevelopment{
+    font-weight: 700;
+    color: var(--blue);
+}
+.lblStatusRejected{
+    font-weight: 700;
+    color: var(--red);
+}

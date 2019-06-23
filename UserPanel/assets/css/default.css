@@ -1,0 +1,348 @@
+/*------------------------Basic Start------------------------*/
+:root {
+    --light: #ececda;
+    --dark: #323232;
+    --pink: #E91E63;
+    --red: #F50057;
+    --yellow: #ffe600;
+    --blue: #0051ff;
+    --purple: #8400db;
+}
+
+*:focus {
+    box-shadow: 0 0 10px 1px rgba(162, 0, 255, 0.3) !important;
+    border-color: transparent !important;
+}
+
+textarea {
+    resize: none;
+}
+
+@font-face {
+    font-family: "BNazanin";
+    src: url("font/BNazanin.eot") format(eot),
+        url("font/BNazanin.ttf") format(ttf),
+        url("font/BNazanin.woff") format(woff);
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: BNazanin !important;
+    overflow-y: scroll;
+    text-align: right !important;
+    background-color: var(--light) !important;
+}
+
+
+*:focus {
+    box-shadow: 0 0 10px 1px rgba(162, 0, 255, 0.3) !important;
+    border-color: transparent !important;
+}
+
+
+.BtnRed {
+    background-color: var(--red);
+    padding: 10px;
+    text-align: center;
+    border: 2px solid var(--red);
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.BtnRed:hover {
+    background-color: white;
+    ;
+    color: var(--red);
+}
+
+.BtnPurple {
+    background-color: var(--purple);
+    padding: 10px;
+    text-align: center;
+    border: 2px solid var(--purple);
+    transition: all 0.3s ease-in-out;
+    color: white;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.BtnPurple:hover {
+    background-color: white;
+    ;
+    color: var(--purple);
+}
+
+/*------------------------Basic End------------------------*/
+
+.panelCard {
+    background-color : rgb(245, 245, 245);
+    color: var(--dark);
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.panelCardHeader {
+    font-size: 20px;
+    padding: 10px;
+    overflow: hidden;
+    border-bottom: 2px solid var(--light);
+    background-color: var(--red);
+    color: var(--light);
+}
+
+.panelCardHeaderR {
+    display: inline-block;
+    width: 80%;
+    float: right;
+    overflow: hidden;
+}
+
+.panelCardHeaderL {
+    display: inline-block;
+    width: 20%;
+    float: left;
+}
+
+.panelCardHeaderL span {
+    float: left;
+    transition: all 0.3s ease-in-out;
+    padding: 3px 7px;
+    border-radius: 25px;
+}
+
+.panelCardHeaderL span:hover {
+    color: var(--red);
+    background-color: white;
+}
+
+.panelCardContentHide {
+    overflow: hidden;
+    height: 0 !important;
+}
+
+.panelCardContent {
+    width: 100%;
+    display: block;
+}
+
+.panelCardMain {
+    padding: 20px 30px;
+    width: 100%;
+    display: block;
+}
+
+.panelCardFooter {
+    padding: 15px 30px;
+}
+
+#sidebar {
+    height: 100vh;
+    background-color: var(--purple);
+    overflow-y: auto;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.4s ease-in-out !important;
+    width: 25%;
+    color: var(--white);
+    z-index: 10000;
+}
+
+.sidebarSm {
+    right: -25% !important;
+    transition: all 2s ease-in-out !important;
+}
+
+.hiddenItem {
+    display: none;
+}
+
+#sidebarHeader {
+    height: 40%;
+    text-align: center;
+    overflow-y: auto;
+}
+#userName{
+    font-weight: 600;
+    margin-top: 10px;
+}
+#btnEditUser {
+    padding: 10px 30px;
+    background-color: white;
+    color: var(--red);
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#btnEditUser:hover {
+    background-color: var(--red);
+    color: white;
+}
+
+#btnExit {
+    padding: 10px 30px;
+    background-color: var(--red);
+    color: white;
+    margin-right: -20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+#btnExit:hover {
+    background-color: white;
+    color: var(--red);
+}
+
+#userProfile {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+#sidebarMain {
+    height: 50%;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    scrollbar-width: 1px !important;
+    scrollbar-color: red !important;
+}
+
+#sidebarMenu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+#sidebarMenu a {
+    display: block;
+    background-color: transparent;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s ease-in;
+    color: var(--light);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.submenuLi a .submenuToggler {
+    float: left;
+    font-size: 13px;
+    padding: 2px 3px;
+    border-radius: 25px;
+    color: white;
+}
+
+#sidebarMenu a:hover,
+.submenuLi ul a:hover {
+    background-color: var(--red) !important;
+}
+
+.submenuLi ul a {
+    padding-right: 40px !important;
+    background-color: rgba(0, 0, 0, 0.445) !important;
+    transition: all 0.2s ease-in;
+}
+
+.submenu {
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.submenuShow {
+    overflow: visible;
+    opacity: 1;
+    max-height: 600px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+#sidebarFooter {
+    text-align: center;
+    padding-top: 20px;
+    height: 10%;
+    width: 100%;
+}
+
+#sidebarFooter a {
+    color: white;
+    font-weight: 800;
+    padding: 10px;
+    transition: all 0.2s ease-in-out;
+    font-size: 12px;
+    display: block;
+    text-decoration: none;
+}
+
+#sidebarFooter a:hover {
+    background-color: var(--dark);
+}
+
+#main {
+    width: 75%;
+    float: left;
+    transition: all 0.4s ease-in-out !important;
+    padding-bottom: 40px;
+}
+
+.mainLg {
+    width: 100% !important;
+}
+
+#topNavbar {
+    background-color: var(--purple) !important;
+}
+
+#topNavbar ul {
+    width: 100%;
+}
+
+#topNavbar ul li:nth-child(1) {
+    width: 10%;
+}
+
+#topNavbar ul li:nth-child(2) {
+    width: 60%;
+}
+
+#topNavbar ul li:nth-child(3) {
+    width: 30%;
+    text-align: center;
+}
+
+#btnSidebarToggler {
+    width: 50%;
+}
+
+#btnSidebarToggler span {
+    transition: all 0.2s ease-in-out;
+}
+
+#btnSidebarToggler:hover span {
+    transform: scale(1.2);
+}
+
+/*=========================== 
+        Validation
+===========================*/
+.invalidInp {
+    box-shadow: 0 0 2px 1px var(--primary);
+}
+
+#lblVilidationSummary {
+    visibility: hidden;
+}

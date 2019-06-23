@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin:0;
+}
+body{
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+/*======================================================
+                    Top Start
+======================================================*/
+#top{
+    width:auto;
+    height: auto;
+    background: rgb(0, 0, 0);
+}
+
+
+/*======================================================
+                    Top End
+======================================================*/
+
+/*======================================================
+                    Short Discription Start
+======================================================*/
+/* #shortDesc{
+    background-color: black;
+} */
+#shortDesc .row div{
+    height: auto;
+}
+#shortDesc img{
+    height: auto;
+}
+#shortDesc p{
+    font-size: 30px;
+}
+/*======================================================
+                    Short Discription End
+======================================================*/
+
+
+
+/*======================================================
+                    images start
+======================================================*/
+#images{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: black;
+}
+#images h1{
+    color: rgb(224, 5, 5);
+}
+#images row{
+    width: 100%;
+} 
+#images .col-lg-3{
+    height: 200px;
+    overflow: hidden;
+}
+#images img{
+    height: 200px;
+    transition: all 0.3s ease-in-out;
+    cursor: zoom-in;
+}
+#images img:hover{
+    transform :scale(1.2,1.2);
+    
+}
+/*======================================================
+                    images end
+======================================================*/
+
+
+
+/*======================================================
+                    images end
+======================================================*/
+#subscribeForm{
+    font-size: 30px;
+} 
+#subscribeForm form{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-size: 30px;
+}
+#subscribeForm button{
+    width: 100%;
+    margin: 1%;
+    color: red;
+    outline: none;
+    background: transparent;
+}
+#subscribeForm form input{
+    font-size: 20px;
+    width: 100%;
+    margin-top: 1%;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid grey;
+    background: transparent;
+}
+#subscribeForm form input:focus{
+    border-bottom: 1px solid red;
+}
+#subscribeForm form input[type="text"]::placeholder{
+    color: red;
+
+}
+#subscribeForm form input[type="email"]::placeholder{
+    color: red;
+}
+#subscribeForm form input:focus::placeholder{
+    color: transparent;
+}
+/*======================================================
+                    images end
+======================================================*/

@@ -1,0 +1,271 @@
+/*------------------------Basic Start------------------------*/
+:root {
+    --purple: rgb(149, 47, 231);
+    --red: rgb(219, 55, 72);
+    --black: rgb(52, 58, 64);
+    --dark: rgb(53, 53, 53);
+    --gray: rgba(206, 206, 206, 0.39);
+    --yellow: rgb(255, 174, 0);
+    --orange: rgb(255, 72, 0);
+    --blue: rgb(0, 110, 255);
+    --green: rgb(0, 255, 106);
+}
+
+@font-face {
+    font-family: "BNazanin";
+    src: url("font/BNazanin.eot") format(eot),
+        url("font/BNazanin.ttf") format(ttf),
+        url("font/BNazanin.woff") format(woff);
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: BNazanin !important;
+}
+
+/*------------------------Basic End------------------------*/
+
+
+/*======================================================
+                Top Background Start
+======================================================*/
+#topBackground {
+    background-color: #705ce6;
+    height: 100%;
+}
+
+#logo {
+    padding-top: 100px;
+}
+
+.bloc-logo {
+    position: relative;
+    width: 700px;
+    height: 400px;
+    margin: 0 auto;
+    margin-bottom: 170px;
+}
+
+.bloc-logo canvas,
+.bloc-logo .logo-mask {
+    display: block;
+    width: 700px;
+    height: 400px;
+}
+
+.bloc-logo .logo-mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: 700px;
+    background-image: url('../images/logo_gradient.png');
+    text-indent: -9999px;
+}
+
+#scrollDown {
+    position: absolute;
+    bottom: 50px;
+    right: 100px;
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 50%;
+    background-color: var(--red);
+    font-size: 20px;
+    color: white;
+    transition: all 0.3s ease-in-out;
+    animation: scrolldown;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+@keyframes scrolldown{
+    0%{
+      background-color:var(--red);  
+    }
+    25%{
+        background: var(--orange);
+    }
+    50%{
+        background-color:var(--yellow);  
+    }
+    75%{
+        background: var(--green);
+    }
+    100%{
+        background: var(--blue);
+    }
+}
+
+/*======================================================
+                Top Background End
+======================================================*/
+
+
+
+
+/*======================================================
+                Project Infos Start
+======================================================*/
+#projectInfo {
+    background-color: rgb(143, 185, 219);
+}
+
+#projImg {
+    padding-left: 0 !important;
+}
+
+/*======================================================
+                Project Infos End
+======================================================*/
+
+
+
+/*======================================================
+                Services Start
+======================================================*/
+
+/*======================================================
+                Services End
+======================================================*/
+
+
+
+/*======================================================
+                Our Qualifications Start
+======================================================*/
+#ourQualifications {
+    background-color:var(--dark);
+    margin-top: 100px;
+    height: 450px;
+    background-position: top;
+    position: relative;
+}
+
+#ourQualifications .container-fluid::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 100px;
+    right: 0;
+    background-color: var(--dark);
+    transform-origin: bottom left;
+    transform: skewY(-2deg);
+    z-index: -10;
+}
+
+#ourQualifications span {
+    color: rgb(197, 35, 57);
+    background-color: rgb(255, 255, 255);
+    border-radius: 25px;
+    padding: 2px;
+    font-size: 20px;
+}
+
+
+/*======================================================
+                Our Qualifications End
+======================================================*/
+
+/*======================================================
+                Project Examples Start
+======================================================*/
+#projectExamples {
+    background-color: var(--gray);
+    margin-top: 150px;
+}
+
+
+.projectExamplesImgContainer {
+    overflow: hidden;
+    height: 300px;
+    width: 100% !important;
+}
+
+.projectExamplesImgContainer img {
+    height: 300px;
+    width: 100% !important;
+    transition: all 0.5s ease-in-out;
+}
+
+.projectExamplesImgContainer img:hover {
+    transform: scale(1.5, 1.5);
+}
+
+/*======================================================
+                Project Examples End
+======================================================*/
+
+
+
+
+
+
+
+/*======================================================
+                Images Of Team Start
+======================================================*/
+#imageOfTeam {
+    background-color: rgb(255, 255, 255);
+}
+
+.imgOverlayContainer {
+    position: relative;
+    width: 50%;
+    right: 25%;
+    box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    /*height: auto;*/
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.582);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .7s ease;
+    border-radius: 5px;
+}
+
+.imgOverlayContainer:hover .overlay {
+    bottom: 0;
+    height: 100%;
+}
+
+.txt {
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+
+
+
+/*======================================================
+                Slider Start
+======================================================*/
+#slider {
+    background-color: red;
+}
+.slick-prev:before, .slick-next:before{
+    display: none !important;
+}
+/*======================================================
+                Slider Start
+======================================================*/

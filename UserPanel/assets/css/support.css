@@ -1,0 +1,35 @@
+@import "default.css";
+.BtnRed{
+    margin-top: 10px;
+    border-radius: 25px;
+    width: 40%;
+    font-weight: 600;
+    display: inline-block;
+}
+.lblStatusOpen{
+    font-weight: 700;
+    color: var(--blue);
+}
+.lblStatusClosed{
+    font-weight: 700;
+    color: var(--green);
+}
+table th:nth-child(1){
+    width: 5%;
+}
+table th:nth-child(2){
+    width: 15%;
+}
+table th:nth-child(3){
+    width: 20%;
+}
+table th:nth-child(4){
+    width: 55%;
+}
+table th:nth-child(5){
+    width: 5%;
+}
+
+#divOtherTicketTitle{
+    display: none;
+}

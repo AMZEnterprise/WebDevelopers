@@ -1,0 +1,224 @@
+body{
+    background-image: url("../image/slideshow/first.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 1s ease-in;
+    height:100vh;
+    width: 100%;
+}
+/*======================================================
+                    Main Start
+======================================================*/
+#main{
+    width: 100%;
+    padding-top: 50px;
+    background: rgba(3, 3, 3, 0.486);
+    height: 100%;
+    color : white;
+}
+
+
+.card{
+    background: rgba(0, 0, 0, 0.432) !important;
+    border-radius: 0;
+    height: 300px;
+    padding: 20px;
+}
+
+.card span{
+    margin-left: 20px;
+    font-size: 20px;
+}
+.card p{
+    color : white;
+    font-size: 16px;
+}
+
+.MainSlider{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 60px;
+}
+
+
+.MainSlider div{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    outline: none;
+    overflow: hidden;
+}
+
+.MainSlider div img{
+    width: 100%;
+    height: 150px;
+    transition: all 0.5s ease-in-out;
+}
+
+.MainSlider div img:hover{
+    width: 100%;
+    height: 150px;
+    transform: scale(1.2,1.2);
+}
+
+/*======================================================
+                    Main End
+======================================================*/
+
+
+
+/*======================================================
+                    Bottom Navigation Start
+======================================================*/
+#BtmNavigation{
+    position: fixed;
+    bottom: 0;
+    
+}
+#BtmNavigation a{
+    color : white;
+}
+#BtmNavigation a:hover{
+    color : rgb(145, 42, 241);
+}
+#btmNav{
+    width: 100%;
+    background: rgb(29, 29, 29);
+    position: fixed;
+    bottom: 0;
+    direction: ltr;
+    padding: 10px;
+}
+#btmNavR{
+    float: right;
+}
+#btmNavL{
+    float: left;
+}
+
+#btmNav a{
+    display: inline;
+}
+/*======================================================
+                    Bottom Navigation End
+======================================================*/
+
+
+
+
+
+/*======================================================
+                    sideMenu Start
+======================================================*/
+#sideMenu{
+    width: 500px;
+    padding: 20px;
+    height:90%;
+    background: rgb(29, 29, 29);
+    position: fixed;
+    display: none;
+    right: 0;
+    bottom: 54px;
+    z-index: 5000 !important;
+}
+
+#sideTop div{
+    height: 200px;
+    width: 100%;
+}
+
+#sideTop img{
+    width: 100%;
+    height: 200px;
+}
+.SideTopSlider{
+    width:100%;
+}
+
+
+.slick-dots li button:before{
+    color : rgb(223, 219, 219) !important;
+}
+.slick-dots li.slick-active button:before{
+    color : white !important;
+}
+
+#sideLeft{
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+}
+
+#sideRight{
+    float: right;
+    width: 50%;
+    padding-left: 10px;
+}
+
+#sideTop{
+    height: 200px;
+    width: 100%;
+    background: lightblue;
+    margin-bottom: 10px;
+}
+
+.sidebtnLg{
+    width: 100%;
+    height: 200px;
+    background: chartreuse;
+    margin-top: 20px;
+    padding-top:20px;
+}
+
+.sidebtnMd{
+    width: 100%;
+    height: 90px;
+    background: rgb(233, 67, 158);
+    margin-top: 20px;
+}
+
+.sidebtnSmL{
+    width: 45%;
+    height: 90px;
+    background: rgb(25, 161, 86);
+    margin-top: 20px;
+    float: right;
+    padding-top:20px;
+}
+
+.sidebtnSmR{
+    width: 45%;
+    height: 90px;
+    background: rgb(209, 68, 3);
+    margin-top: 20px;
+    float: left;
+    padding-top:20px;
+}
+
+.sidebtn{
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none !important;
+}
+
+.sidebtn:hover{
+    color : white;
+}
+
+.sideIcoLg{
+    font-size: 100px;
+}
+
+.sideIcoMd{
+    font-size: 50px;
+}
+
+.sideIcoSm{
+    font-size: 25px;
+}
+/*=====================================================
+                    sideMenu End
+======================================================*/

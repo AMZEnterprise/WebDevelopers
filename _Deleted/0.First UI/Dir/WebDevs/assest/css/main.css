@@ -1,0 +1,718 @@
+/*------------------------Basic Start------------------------*/
+:root {
+    --purple: rgb(149, 47, 231);
+    --red: rgb(219, 55, 72);
+    --black: rgb(52, 58, 64);
+    --dark: rgb(53, 53, 53);
+    --gray: rgba(206, 206, 206, 0.39);
+    --yellow: rgb(255, 174, 0);
+    --orange: rgb(255, 72, 0);
+    --blue: rgb(0, 110, 255);
+    --green: rgb(0, 255, 106);
+}
+
+@font-face {
+    font-family: "BNazanin";
+    src: url("font/BNazanin.eot") format(eot),
+        url("font/BNazanin.ttf") format(ttf),
+        url("font/BNazanin.woff") format(woff);
+    font-style: normal;
+    font-weight: normal;
+}
+
+body {
+    font-family: BNazanin !important;
+}
+
+
+/*------------------------Basic End------------------------*/
+
+
+
+/*======================================================
+                    Top - Header Start
+======================================================*/
+#outterBar {
+    width: 100%;
+    background: rgb(48, 46, 46);
+    position: fixed;
+    top: 0;
+    z-index: 20000;
+}
+
+#innerBar {
+    width: 0%;
+    background: var(--purple);
+    height: 4px;
+}
+
+#topBar {
+    background-color: var(--dark);
+    width: 100%;
+    float: left;
+    padding-left: 20px;
+    height: 30px;
+    padding-top: 5px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.541);
+}
+
+#topBar ul {
+    float: left;
+}
+
+#topBar ul li {
+    display: inline;
+    color: white;
+    padding: 0 20px;
+}
+
+#topBar ul li:nth-child(1) {
+    border-left: 2px solid var(--red);
+}
+
+#top {
+    z-index: 100 !important;
+    width: 100%;
+}
+
+
+#navigation {
+    padding: 30px;
+    z-index: 2000;
+    position: fixed;
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.navigationBefore {
+    background-color: transparent;
+    top: 30px;
+}
+
+.navigationAfter {
+    background-color: rgb(48, 46, 46);
+    top: 0px;
+    box-shadow: 0 2px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+#navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+#navigation a:hover {
+    color: var(--blue);
+}
+
+.navlink {
+    margin: 20px;
+}
+
+.drop {
+    position: relative;
+    display: inline-block;
+}
+
+.dropContent {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    background: rgb(48, 46, 46);
+    text-align: center;
+    min-width: 130px;
+    z-index: 2000;
+    transition: all 0.3s ease-in-out;
+    padding-top: 10px;
+}
+
+.droplink {
+    display: block;
+    padding: 10px;
+}
+
+
+.drop:hover .dropContent {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*============== Side Menu (Tablet And Mobile) ==============*/
+#sideToggler {
+    background: transparent;
+    color: white;
+    border: 0px;
+    font-size: 25px;
+    padding: 2px 10px;
+    transition: all 0.3s ease-in;
+    display: none;
+    background: var(--red);
+    outline: none;
+}
+
+#sideToggler:hover {
+    transform: scale(0.95, 0.95);
+}
+
+#side {
+    width: 0px;
+    height: 100%;
+    background: var(--dark);
+    z-index: 1000 !important;
+    transition: all 0.2s ease-in-out !important;
+    visibility: hidden;
+    border-left: 5px solid var(--blue);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.sideShow {
+    visibility: visible !important;
+    width: 300px !important;
+}
+
+#side span {
+    color: white;
+    margin-right: 40px;
+    margin-top: 40px;
+    font-size: 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+#side span:hover {
+    color: var(--blue);
+    transform: scale(0.95, 0.95);
+}
+
+#side ul {
+    list-style-type: none;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 100px;
+}
+
+#side ul li a {
+    color: white;
+    display: block;
+    text-decoration: none;
+}
+
+#side ul li a:hover {
+    color: var(--blue) !important;
+}
+
+/*======================================================
+                    Top - Header End
+======================================================*/
+
+
+
+
+
+/*======================================================
+                    Slider Start
+======================================================*/
+#slider {
+    width: 100%;
+    background: rgb(231, 21, 194);
+    background: linear-gradient(356deg, rgba(231, 21, 194, 1) 13%, rgba(7, 80, 212, 1) 92%);
+    background-size: cover;
+    height: 800px;
+    z-index: -10 !important;
+    clear: both !important;
+}
+
+#sliderOverlay {
+    width: 100% !important;
+    background-color: rgba(0, 0, 0, 0.219);
+    margin-top: 250px;
+    padding: 20px;
+}
+
+#sliderIconFacebook {
+    color: rgb(54, 54, 250);
+    background-color: white;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+#sliderIconFacebook:hover {
+    background-color: rgb(54, 54, 250);
+    color: white;
+}
+
+#sliderIconInstagarm {
+    color: var(--purple);
+    background-color: white;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+#sliderIconInstagarm:hover {
+    background-color: var(--purple);
+    color: white;
+}
+
+#sliderIconLinkedIn {
+    color: rgb(33, 33, 199);
+    background-color: white;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+#sliderIconLinkedIn:hover {
+    background-color: rgb(33, 33, 199);
+    color: white;
+}
+
+#sliderIconGooglePluse {
+    color: rgb(194, 14, 14);
+    background-color: white;
+    padding: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+}
+
+#sliderIconGooglePluse:hover {
+    background-color: rgb(194, 14, 14);
+    color: white;
+}
+
+.animatedText,
+.typed-cursor {
+    display: inline;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.animatedTextColor1 {
+    color: white;
+}
+
+.animatedTextColor2 {
+    color: rgb(255, 0, 85);
+}
+
+.animatedTextColor3 {
+    color: rgb(0, 217, 255);
+}
+
+
+.typed-cursor {
+    opacity: 1;
+    animation: blink 0.7s infinite;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*======================================================
+                    Slider End
+======================================================*/
+
+
+/*======================================================
+                    SlideShow Start
+======================================================*/
+
+
+/*======================================================
+                    SlideShow End
+======================================================*/
+
+
+
+
+
+
+
+
+/*======================================================
+                    Introduction Start
+======================================================*/
+
+#introduction {
+    background-color: var(--purple);
+}
+
+
+
+/*======================================================
+                    Introduction End
+======================================================*/
+
+
+
+
+/*======================================================
+                    Android Start
+======================================================*/
+#android {
+    background: var(--red);
+}
+
+#android img {
+    height: 400px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    box-shadow: -3px 5px 10px 2px rgba(0, 0, 0, 0.562);
+}
+
+#androidBtns {
+    margin-top: 130px;
+}
+
+#androidBtns a:nth-child(1) {
+    width: 60%;
+}
+
+#androidBtns a:nth-child(2) {
+    width: 30%;
+}
+
+/*======================================================
+                    Android End
+======================================================*/
+
+
+
+
+/*======================================================
+                    Game Start
+======================================================*/
+#game {
+    padding-top: 100px;
+    color: var(--black);
+    padding-bottom: 50px;
+    background-color: var(--orange);
+}
+
+#gameBtns {
+    margin-top: 170px;
+}
+
+#gameBtns a:nth-child(1) {
+    display: inline-block;
+    width: 60%;
+}
+
+#gameBtns a:nth-child(2) {
+    width: 30%;
+}
+
+
+
+/*======================================================
+                    Game End
+======================================================*/
+
+
+
+
+
+
+
+
+
+/*======================================================
+                    Services Start
+======================================================*/
+#Services {
+    background-color: var(--blue);
+    padding-bottom: 50px;
+}
+
+#Services h2 {
+    background-color: var(--blue);
+}
+
+.ServicesCard {
+    height: 150px;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: center;
+    color: white;
+    border: 1px solid transparent;
+    overflow: hidden;
+}
+
+.ServicesCard:hover {
+    cursor: pointer;
+    background-color: var(--black);
+}
+
+.ServicesCard:hover span {
+    transform: rotate(360deg);
+}
+
+.ServicesCard span {
+    font-size: 30px;
+    transition: all 0.7s ease-in-out;
+}
+
+.ServicesCard h3 {
+    font-size: 22px;
+}
+
+.ServicesCard p {
+    margin-top: 15px;
+}
+
+
+/*======================================================
+                    Services End
+======================================================*/
+
+
+/*======================================================
+                    Teams Start
+======================================================*/
+#teams {
+    background-color: var(--black);
+}
+
+#teams img {
+    width: 300px;
+    height: 200px;
+    float: right;
+    margin-left: 30px;
+}
+
+.imgInfo p {
+    color: black;
+    margin-top: 50px;
+}
+
+.SlikSlider {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.SlikSlider div {
+    outline: none;
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: var(--red) !important;
+}
+
+.slick-dots li button::before {
+    color: var(--red) !important;
+}
+
+/*======================================================
+                    Teams End
+======================================================*/
+
+
+
+/*======================================================
+                    Projects View Start
+======================================================*/
+#projectsView {
+    background-color: var(--gray);
+    padding: 100px 0;
+}
+
+#projectsView row {
+    width: 100%;
+}
+
+#projectsView .col-lg-3 {
+    height: 200px;
+    overflow: hidden;
+}
+
+#projectsView img {
+    height: 200px;
+    transition: all 0.4s ease-in-out;
+    cursor: zoom-in;
+}
+
+#projectsView img:hover {
+    transform: scale(1.3, 1.3);
+}
+
+/*======================================================
+                    Projects View End
+======================================================*/
+
+
+
+
+
+
+
+
+
+/*======================================================
+                    Footer And Copyright Start
+======================================================*/
+#bottom {
+    border-top: 20px solid var(--dark);
+}
+
+#bottom .fa-2x a {
+    color: white;
+}
+
+#bottom .fa-2x a:hover {
+    color: rgb(0, 195, 255);
+}
+
+#bottom form input[type="text"] {
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid var(--blue);
+    width: 100%;
+    padding: 2px;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+}
+
+#bottom form input[type="text"]:focus {
+    border-bottom: 2px solid var(--red);
+}
+
+#bottom form textarea {
+    outline: none;
+    border: 0;
+    border-bottom: 2px solid var(--blue);
+    width: 100%;
+    padding: 2px;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    resize: none;
+    height: 100px;
+}
+
+#bottom form textarea:focus {
+    border-bottom: 2px solid var(--red);
+}
+
+#bottom button {
+    border: 1px solid var(--blue);
+}
+
+#bottom button:hover {
+    background: var(--blue) !important;
+}
+
+#bottom span {
+    font-size: 20px;
+    color: var(--blue);
+}
+
+.links li {
+    border-bottom: 1px solid rgb(65, 65, 65);
+    padding-bottom: 10px;
+}
+
+#bottom li a {
+    color: rgb(192, 192, 192) !important;
+}
+
+
+#copyright {
+    background-color: var(--dark);
+    border-bottom: 5px solid var(--red);
+}
+
+/*======================================================
+                    Footer And Copyright End
+======================================================*/
+
+
+
+
+
+/*======================================================
+                    GotoTop Arrow Start
+======================================================*/
+
+#GoToTopArrow {
+    clear: both;
+    position: fixed;
+    display: inline-block;
+    color: white;
+    background-color: var(--dark);
+    left: 2%;
+    bottom: 2%;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 8px 12px;
+}
+
+#GoToTopArrow:hover {
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.404);
+}
+
+#GoToTopArrow i {
+    font-size: 15px;
+}
+
+.GoToTopArrowSecond {
+    visibility: visible !important;
+}
+
+
+/*======================================================
+                    GotoTop Arrow Ends
+======================================================*/

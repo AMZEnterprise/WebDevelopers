@@ -1,0 +1,76 @@
+Post
+	{
+		id
+		title
+		date
+		time
+		writerId
+		main picture
+		content
+		views
+		comments
+		status (published,not published,deleted)
+	}
+-------------------------------------------------------------------------------
+Comment
+	{
+		id
+		username (or firstname + lastname for pepople who are not registered in our site)
+		date
+		time
+		text
+		comments list (or parent Id)
+		status (span , not spam)
+	}
+-------------------------------------------------------------------------------
+Admin
+	{
+		firstname
+		lastname
+		username
+		password
+		description
+		picture
+	}
+-------------------------------------------------------------------------------
+Users(customer)
+	{
+		firstname
+		lastname
+		username
+		password
+		email
+		phonenumber
+		description
+	}
+-------------------------------------------------------------------------------
+Project
+	{
+		username
+		description
+		date
+		time
+		userfiles (for examle a pdf conatining description of the project or some photos of project)
+		status(rejected,underdevelopment,done)
+		tickets
+	}
+-------------------------------------------------------------------------------
+Tickets
+	{
+		username (user who asked a question)
+		adminId (admin who anwered the question)
+		date
+		time
+		status (open , closed)
+		tickets list (or parent Id)
+	}
+-------------------------------------------------------------------------------
+Log
+	{
+		date
+		text
+	}
+*******************************************************************************
+Note : 
+	Tickets are used for Q/A purpose in user panel , they can argue about the project for
+	 example project bugs , proeject price , etc.

@@ -1,0 +1,10 @@
+document.getElementById("btnFileUploader").addEventListener("click",function(){
+    document.getElementById("hiddenFileUploader").click();
+})
+document.getElementById("frmRegisterProject").addEventListener("submit",function(e){
+    e.preventDefault();
+    document.getElementById("submitAlert").setAttribute("class","showAlert");
+})
+document.getElementById("btnCloseSubmitAlert").addEventListener("click",function(){
+    document.getElementById("submitAlert").removeAttribute("class");
+})
