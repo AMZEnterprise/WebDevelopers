@@ -171,7 +171,7 @@ body {
 #navigation a {
     text-decoration: none;
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.05rem;
 }
 
 .navlink {
@@ -197,7 +197,6 @@ body {
     position: absolute;
     visibility: hidden;
     opacity: 0;
-    background-color: var(--black);
     text-align: center;
     width: 100%;
     z-index: 2000;
@@ -211,10 +210,14 @@ body {
     padding: 10px;
 }
 
+.droplink:hover{
+    background-color: var(--purple) !important;
+}
 
 .drop:hover .dropContent {
     visibility: visible;
     opacity: 1;
+    background-color: var(--red) !important;
 }
 
 /*============== Side Menu (Tablet And Mobile) ==============*/
@@ -251,6 +254,7 @@ body {
 .sideShow {
     visibility: visible !important;
     height: 100% !important;
+    background-color: var(--dark) !important;
 }
 
 #side span {
@@ -279,6 +283,7 @@ body {
     color: white;
     display: block;
     text-decoration: none;
+    font-size: 1.05rem;
 }
 
 #side ul li a:hover {

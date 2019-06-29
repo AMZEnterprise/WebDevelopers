@@ -282,7 +282,7 @@
                     Services Start
 ======================================================*/
 #Services {
-    background-color: var(--red);
+    background-color: var(--pink);
     padding-bottom: 50px;
 }
 
@@ -298,7 +298,6 @@
 
 .ServicesCard:hover {
     cursor: pointer;
-    background-color: var(--black);
 }
 
 .ServicesCard:hover span {

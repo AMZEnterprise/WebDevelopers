@@ -83,10 +83,11 @@
     show = false;
   })
 
-  //fill side menu data with desktop menu data dynamicly - just change desktop navbar
+  //fill side menu data with desktop menu data dynamically - just change desktop navbar
   let menu = document.getElementById("navLinks");
   let sidemenu = document.getElementById("sideContent");
-  for (let i = 0; i < 4; i++) {
+
+  for (let i = 0; i < menu.children.length; i++) {
 
     let listItem = document.createElement("li");
     let link = document.createElement("a");
@@ -171,7 +172,32 @@
     rtl: true,
     autoplaySpeed: 1000,
     arrows: false,
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 500,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
   /*======================================================
                  comments Slider End
@@ -287,16 +313,21 @@
     var description = document.getElementById("description");
 
     fullname.style.backgroundColor = "white";
+    fullname.setAttribute("placeholder","نام");
     email.style.backgroundColor = "white";
+    email.setAttribute("placeholder","ایمیل");
     description.style.backgroundColor = "white";
+    description.setAttribute("placeholder","نظر شما");
 
 
     if (fullname.value == "") {
       fullname.style.backgroundColor = "var(--purple)";
+      fullname.setAttribute("placeholder","اسمت رو وارد نکردی !");
     }
 
     if (!ValidEmail(email.value)) {
       email.style.backgroundColor = "var(--purple)";
+      email.setAttribute("placeholder","آدرس ایمیلت رو چک کن !");
     }
 
     function ValidEmail() {
@@ -307,6 +338,7 @@
 
     if (description.value == "") {
       description.style.backgroundColor = "var(--purple)";
+      description.setAttribute("placeholder","نظر یادت رفت !");
     }
 
     if (fullname.value == "" || !ValidEmail(email.value) || description.value == "") {
