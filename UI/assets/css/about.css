@@ -4,7 +4,7 @@
                     Site OverView Start
 ======================================================*/
 #SiteOverView{
-    background-color: var(--light);
+    
 }
 #SiteOverView>p{
     color: var(--pink);
