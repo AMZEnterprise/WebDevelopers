@@ -164,7 +164,7 @@ body {
 
 .navigationAfter {
     background-color: var(--red);
-    top: 0px;
+    top: 0;
     height: 100px;
 }
 
@@ -198,7 +198,7 @@ body {
     visibility: hidden;
     opacity: 0;
     text-align: center;
-    width: 100%;
+    width: max-content !important;
     z-index: 2000;
     transition: all 0.3s ease-in-out;
     padding-top: 10px;
@@ -211,7 +211,7 @@ body {
 }
 
 .droplink:hover{
-    background-color: var(--purple) !important;
+    background-color: var(--dark) !important;
 }
 
 .drop:hover .dropContent {
@@ -229,7 +229,6 @@ body {
     padding: 2px 10px;
     transition: all 0.3s ease-in;
     display: block;
-    background: var(--purple);
     outline: none;
     display: none;
 }
@@ -241,17 +240,16 @@ body {
 #side {
     width: 100%;
     height: 0px;
-    background-color: var(--black);
+    background-color: var(--dark);
     z-index: 1000 !important;
     transition: all 0.2s ease-in-out !important;
     visibility: hidden;
-    border-left: 5px solid var(--blue);
-    position: fixed;
-    top: 0;
-    right: 0;
 }
 
 .sideShow {
+    position: fixed;
+    top: -0 !important;
+    right: 0;
     visibility: visible !important;
     height: 100% !important;
     background-color: var(--dark) !important;
@@ -276,7 +274,7 @@ body {
     list-style-type: none;
     font-size: 25px;
     text-align: center;
-    margin-top: 100px;
+    margin-top: 10vh;
 }
 
 #side ul li a {
@@ -341,13 +339,14 @@ body {
     height: 100px;
 }
 
-#bottom button {
+#btnSendViewPoint {
     border: 1px solid var(--purple1);
+    transition: all 0.2s ease-in;
     font-weight: 800;
-    border-radius: 25px !important;
+    padding: 20px 0
 }
 
-#bottom button:hover {
+#btnSendViewPoint:hover {
     background: var(--purple) !important;
 }
 
@@ -664,3 +663,69 @@ body {
 /*======================================================
                     Blog End 
 ======================================================*/
+
+
+
+
+
+
+
+/*=================================================================================================================================
+                                                            Tablet Mode
+===================================================================================================================================*/
+@media (min-width:765px) and (max-width:990px) {
+    #sideToggler {
+        display: block !important;
+        z-index: 10000;
+        float: left;
+    }
+
+    #smallNav {
+        background-color: var(--red);
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        padding: 10px;
+        top: 0;
+    }
+
+    #topBar {
+        position: fixed;
+        z-index: 100;
+    }
+
+    #navigation {
+        display: none !important;
+    }
+}
+
+/*=================================================================================================================================
+                                                            Mobile Mode
+===================================================================================================================================*/
+
+@media(max-width:764px) {
+
+    #sideToggler {
+        display: block !important;
+        z-index: 10000;
+        float: left;
+    }
+
+    #smallNav {
+        background-color: var(--red);
+        width: 100%;
+        position: fixed;
+        z-index: 100;
+        padding: 10px;
+        top: 0;
+    }
+
+    #topBar {
+        display: none;
+    }
+
+    #navigation {
+        display: none !important;
+    }
+
+}

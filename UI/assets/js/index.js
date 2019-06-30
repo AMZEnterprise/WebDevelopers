@@ -137,7 +137,32 @@
     autoplay: true,
     autoplaySpeed: 10000,
     arrows: false,
-    dots: true
+    dots: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
   /*======================================================
                  Team Slider End
@@ -177,8 +202,8 @@
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true
         }
@@ -186,12 +211,12 @@
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       },
       {
-        breakpoint: 500,
+        breakpoint: 600,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1
@@ -321,12 +346,12 @@
 
 
     if (fullname.value == "") {
-      fullname.style.backgroundColor = "var(--purple)";
+      fullname.style.backgroundColor = "var(--dark)";
       fullname.setAttribute("placeholder","اسمت رو وارد نکردی !");
     }
 
     if (!ValidEmail(email.value)) {
-      email.style.backgroundColor = "var(--purple)";
+      email.style.backgroundColor = "var(--dark)";
       email.setAttribute("placeholder","آدرس ایمیلت رو چک کن !");
     }
 
@@ -337,7 +362,7 @@
 
 
     if (description.value == "") {
-      description.style.backgroundColor = "var(--purple)";
+      description.style.backgroundColor = "var(--dark)";
       description.setAttribute("placeholder","نظر یادت رفت !");
     }
 
