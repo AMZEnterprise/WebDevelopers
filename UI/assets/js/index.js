@@ -138,8 +138,7 @@
     autoplaySpeed: 10000,
     arrows: false,
     dots: true,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
@@ -198,8 +197,7 @@
     autoplaySpeed: 1000,
     arrows: false,
     dots: true,
-    responsive: [
-      {
+    responsive: [{
         breakpoint: 1024,
         settings: {
           slidesToShow: 2,
@@ -330,43 +328,51 @@
   /*======================================================
                   viewpoint Form Validation Start
   ======================================================*/
-
   document.getElementById("viewpointForm").addEventListener("submit", function (e) {
 
     var fullname = document.getElementById("fullname");
     var email = document.getElementById("email");
     var description = document.getElementById("description");
 
+
     fullname.style.backgroundColor = "white";
-    fullname.setAttribute("placeholder","نام");
+    fullname.setAttribute("placeholder", "نام");
     email.style.backgroundColor = "white";
-    email.setAttribute("placeholder","ایمیل");
+    email.setAttribute("placeholder", "ایمیل");
     description.style.backgroundColor = "white";
-    description.setAttribute("placeholder","نظر شما");
+    description.setAttribute("placeholder", "نظر شما");
 
 
-    if (fullname.value == "") {
+    if (fullname.value.toString().trim() == "") {
       fullname.style.backgroundColor = "var(--dark)";
-      fullname.setAttribute("placeholder","اسمت رو وارد نکردی !");
+      fullname.style.color = "white";
+      fullname.setAttribute("placeholder", "اسمت رو وارد نکردی !");
+    } else {
+      fullname.style.color = "black";
     }
 
-    if (!ValidEmail(email.value)) {
+    if (!ValidEmail(email.value.toString().trim())) {
       email.style.backgroundColor = "var(--dark)";
-      email.setAttribute("placeholder","آدرس ایمیلت رو چک کن !");
+      email.style.color = "white";
+      email.setAttribute("placeholder", "آدرس ایمیلت رو چک کن !");
+    } else {
+      email.style.color = "black";
     }
 
     function ValidEmail() {
       var myCk = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-      return myCk.test(email.value);
+      return myCk.test(email.value.toString().trim());
     }
 
 
-    if (description.value == "") {
+    if (description.value.toString().trim() == "") {
       description.style.backgroundColor = "var(--dark)";
-      description.setAttribute("placeholder","نظر یادت رفت !");
+      description.style.color = "white";
+      description.setAttribute("placeholder", "نظر یادت رفت !");
+    } else {
+      description.style.color = "black";
     }
-
-    if (fullname.value == "" || !ValidEmail(email.value) || description.value == "") {
+    if (fullname.value.toString().trim() == "" || !ValidEmail(email.value.toString().trim()) || description.value.toString().trim() == "") {
       e.preventDefault();
     }
   })

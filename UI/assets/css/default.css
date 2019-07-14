@@ -13,6 +13,7 @@
     box-shadow: 0 0 10px 1px rgba(162, 0, 255, 0.3) !important;
     border-color: transparent !important;
 }
+
 textarea{
     resize: none;
 }
@@ -149,7 +150,9 @@ body {
 #navigation #navLinks li {
     display: inline-block;
 }
-
+#navigation #navLinks li>a:hover{
+    color: var(--dark);
+}
 #navLogo img {
     width: 200px;
     height: 100%;
