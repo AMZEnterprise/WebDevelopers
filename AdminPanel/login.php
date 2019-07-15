@@ -24,22 +24,22 @@
                             <h4>ورود</h4>
                         </div>
                         <div class="card-body pt-5">
-                            <form action="" method="POST">
+                            <form action="index.php" method="POST">
                                 <div class="form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-user text-danger"></i></span>
-                                        <input type="text" class="form-control" placeholder="نام کاربری" id="username">
+                                        <input type="text" class="form-control" placeholder="نام کاربری" name="username">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fa fa-key text-danger"></i></span>
                                         <input type="password" class="form-control" placeholder="رمز عبور"
-                                            id="password">
+                                            name="password">
                                     </div>
                                 </div>
                                 <button class="btn btn-danger rounded-0 mt-5 btn-block" type="submit"
-                                    id="btnLogin">ورود</button>
+                                    name="btnLogin">ورود</button>
                             </form>
                         </div>
                     </div>
