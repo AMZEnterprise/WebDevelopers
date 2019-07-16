@@ -9,7 +9,7 @@ else
 {
 if($status == false)
 {
-	echo "<span style = 'color :red; font-size: 35px;' >ERROR :( </br > You must first Config db.cgf file,<br /> or may be you enter invalid information at that file! check it! :)</span>";
+	echo "<span style = 'color :red; font-size: 35px;' >ERROR :( </br > You must first Config db.cfg file,<br /> or may be you enter invalid information at that file! check it! :)</span>";
 }
 
 	$data = mysqli_query($db, 'Select * From Admin');
