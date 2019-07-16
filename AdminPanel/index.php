@@ -43,7 +43,7 @@ if(!isset($_SESSION['username']))
                             <a href="#" class="dropdown-item"><i class="fa fa-cog mr-3"></i>تنظیمات</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="login.php" class="nav-link mr-5"><span class="fa fa-sign-out-alt"></span> خروج </a></li>
+                    <li class="nav-item"><a href="control/exit.php" class="nav-link mr-5"><span class="fa fa-sign-out-alt"></span> خروج </a></li>
                 </ul>
             </div>
         </nav>

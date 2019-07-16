@@ -8,3 +8,7 @@ else if(st == 'e')
 {
 	alert("You must Enter someword in both Boxes!");
 }
+else if(st == 'x')
+{
+	alert("You Logout Successfully!");
+}

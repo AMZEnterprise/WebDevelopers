@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/lib/all.min.css">
     <link rel="stylesheet" href="assets/css/profile.css">
-	<script language =  'javascript' >alert('aaa')</script>
 </head>
 
 <body class="bg-dark">
