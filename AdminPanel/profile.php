@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="assets/css/lib/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/lib/all.min.css">
     <link rel="stylesheet" href="assets/css/profile.css">
+	<script language =  'javascript' >alert('aaa')</script>
 </head>
 
 <body class="bg-dark">
@@ -37,7 +38,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link dropdown-toggle mr-2" id="userSetting" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                class="fa fa-user-circle"></i><span id="username"> علی مومن زاده </span> </a>
+                                class="fa fa-user-circle"></i><span id="username">  </span> </a>
                         <div class="dropdown-menu">
                             <a href="profile.php" class="dropdown-item"><i class="fa fa-edit mr-3"></i>پروفایل</a>
                             <a href="#" class="dropdown-item"><i class="fa fa-cog mr-3"></i>تنظیمات</a>
@@ -75,10 +76,10 @@
             <div class="row py-4 mt-5 justify-content-center">
                 <div class="col-lg-7 col-md-8 col-sm-12 col-12 p-3 text-white">
                     <div class="mx-5">
-                        <form action="" method="GET">
+                        <form action="" method="POST">
                             <div class="form-group">
                                 <label for="firstname">نام</label>
-                                <input type="text" class="form-control" id="firstname">
+                                <input type="text" class="form-control" id="firstname" >
                             </div>
                             <div class="form-group">
                                 <label for="lastname">نام خانوادگی</label>
@@ -104,7 +105,7 @@
                                 <textarea name="" id="description" cols="30" rows="5" class="form-control"
                                     placeholder="توضیحات"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-success rounded-0" id="btnEditInfo">اعمال
+                            <button type="submit" class="btn btn-success rounded-0" name ="btnEditInfo">اعمال
                                 تغییرات</button>
                         </form>
                     </div>

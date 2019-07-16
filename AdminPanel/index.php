@@ -1,33 +1,11 @@
 <?php
-$status=false;
-if(isset($_SESSION['status']))
+session_start();
+if(!isset($_SESSION['username']))
 {
-	$status = true;
+	header('location:login.html');
 }
-if(isset($_POST["btnLogin"]) and $_POST['username'] != '' and $_POST['password'] != '')
-{
-	
-	$db = @mysqli_connect('localhost', 'root', '' , 'WebDevelopers');
-	$query = "Select * From Admin";
-	$data = mysqli_query($db,$query);
-	while($rows = mysqli_fetch_assoc($data))
-	{
-		if($rows['username'] == $_POST['username'] and $rows['password'] == $_POST['password'])
-		{
-			$status = true;
-			$_SESSION['status'] = "OK";
-			$_SESSION['user'] = $rows['firstname'];
-			break;
-		}
-	}
-}
-if($status == false)
-{
-	header('location:login.php');
-}
-	
-?>
 
+?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
 <head>
@@ -59,7 +37,7 @@ if($status == false)
                 <ul class="nav navbar-nav ml-auto">
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link dropdown-toggle mr-2" id="userSetting" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i><span id="username">  <?php echo $_SESSION['user']; ?> </span> </a>
+                        <a href="#" class="nav-link dropdown-toggle mr-2" id="userSetting" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i><span id="username">  <?php echo $_SESSION['username']; ?> </span> </a>
                         <div class="dropdown-menu">
                             <a href="profile.php" class="dropdown-item"><i class="fa fa-edit mr-3"></i>پروفایل</a>
                             <a href="#" class="dropdown-item"><i class="fa fa-cog mr-3"></i>تنظیمات</a>
