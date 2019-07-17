@@ -17,7 +17,7 @@ if($status == false)
 	$flag = false;
 	while($row = mysqli_fetch_assoc($data))
 	{
-		if($row['username'] == $_POST['username'] and $row['password'] == $_POST['password'])
+		if($row['username'] == $_POST['username'] and $row['password'] == md5($_POST['password']))
 		{
 			$username = $row['username'];
 			$flag = true;

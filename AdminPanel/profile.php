@@ -1,3 +1,34 @@
+<?php
+session_start();
+if(!isset($_SESSION['username']))
+{
+	header('location:login.html');
+}
+else
+{
+	include('config.php');
+	$db = @mysqli_connect("$host", "$user", "$pass" , "$dbname");
+	$firstname = '';
+	$lastname = '';
+	$username = '';
+	$email = '';
+	$description = '';
+	
+	$data = mysqli_query($db, "Select * From Admin");
+	while($row = mysqli_fetch_assoc($data))
+	{
+		if($row['username'] == $_SESSION['username'])
+		{
+			$firstname = $row['firstname'];
+			$lastname = $row['lastname'];
+			$username = $row['username'];
+			$email = $row['email'];
+			$description = $row['description'];
+			$picture = $row['picture'];
+		}
+	}
+}
+?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
 
@@ -37,13 +68,13 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link dropdown-toggle mr-2" id="userSetting" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i
-                                class="fa fa-user-circle"></i><span id="username">  </span> </a>
+                                class="fa fa-user-circle"></i><span id="username"> <?php echo $username; ?> </span> </a>
                         <div class="dropdown-menu">
                             <a href="profile.php" class="dropdown-item"><i class="fa fa-edit mr-3"></i>پروفایل</a>
                             <a href="#" class="dropdown-item"><i class="fa fa-cog mr-3"></i>تنظیمات</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="login.php" class="nav-link mr-5"><span
+                    <li class="nav-item"><a href="control/exit.php" class="nav-link mr-5"><span
                                 class="fa fa-sign-out-alt"></span> خروج </a></li>
                 </ul>
             </div>
@@ -75,34 +106,34 @@
             <div class="row py-4 mt-5 justify-content-center">
                 <div class="col-lg-7 col-md-8 col-sm-12 col-12 p-3 text-white">
                     <div class="mx-5">
-                        <form action="" method="POST">
+                        <form action="control/updateProfile.php" method="POST">
                             <div class="form-group">
                                 <label for="firstname">نام</label>
-                                <input type="text" class="form-control" id="firstname" >
+                                <input type="text" class="form-control" name="firstname" value = "<?php echo $firstname; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="lastname">نام خانوادگی</label>
-                                <input type="text" class="form-control" id="lastname">
+                                <input type="text" class="form-control" name="lastname" value = "<?php echo $lastname; ?>">
                             </div>
                             <div class="form-group">
                                 <label for="username">نام کاربری</label>
-                                <input type="text" class="form-control" id="username">
+                                <input type="text" class="form-control" name="username" value = "<?php echo $username; ?>" >
                             </div>
                             <div class="form-group">
                                 <label for="password">رمز عبور</label>
-                                <input type="password" class="form-control" id="password">
+                                <input type="password" class="form-control" name="password" value = "" >
                             </div>
                             <div class="form-group">
                                 <label for="passwordConfirm">تکرار رمز عبور</label>
-                                <input type="password" class="form-control" id="passwordConfirm">
+                                <input type="password" class="form-control" name="passwordConfirm" value = "" >
                             </div>
                             <div class="form-group">
                                 <label for="email">ایمیل</label>
-                                <input type="text" class="form-control" id="email">
+                                <input type="text" class="form-control" name="email" value = "<?php echo $email; ?>" >
                             </div>
                             <div class="form-group mt-4">
-                                <textarea name="" id="description" cols="30" rows="5" class="form-control"
-                                    placeholder="توضیحات"></textarea>
+                                <textarea name="" name="description" cols="30" rows="5" class="form-control"
+                                    placeholder="توضیحات"> <?php echo $description; ?> </textarea>
                             </div>
                             <button type="submit" class="btn btn-success rounded-0" name ="btnEditInfo">اعمال
                                 تغییرات</button>
@@ -114,7 +145,7 @@
                     <div class="w-75 mx-2">
                         <h6 class="text-center ">تصویر پروفایل</h6>
                         <div id="profileImage">
-                            <img src="assets/images/userAvatar.png" alt="Avatar">
+                            <img src="assets/images/<?php echo $picture; ?>" alt="Avatar">
                         </div>
                         <button class="btn btn-danger rounded-0 btn-block mt-1" id="btnDeletePic"><span
                                 class="fa fa-eraser"></span> حذف</button>
@@ -144,6 +175,7 @@
     <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
     <script src="assets/js/lib/bootstrap.min.js"></script>
     <script src="assets/js/profile.js"></script>
+    <script src="assets/js/checkProfile.js"></script>
 </body>
 
 </html>

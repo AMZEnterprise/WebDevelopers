@@ -4,7 +4,6 @@ if(!isset($_SESSION['username']))
 {
 	header('location:login.html');
 }
-
 ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
