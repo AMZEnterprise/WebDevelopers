@@ -12,3 +12,7 @@ else if(st == 's')
 {
 	alert("You information update Succesfully!");
 }
+else if(st == 'z')
+{
+	alert("ERROR while loading File!");
+}

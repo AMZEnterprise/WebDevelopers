@@ -147,12 +147,12 @@ else
                         <div id="profileImage">
                             <img src="assets/images/<?php echo $picture; ?>" alt="Avatar">
                         </div>
-                        <button class="btn btn-danger rounded-0 btn-block mt-1" id="btnDeletePic"><span
-                                class="fa fa-eraser"></span> حذف</button>
-                        <button class="btn btn-primary rounded-0 btn-block mt-1" id="btnEditPic"><span
-                                class="fa fa-edit"></span> تغییر</button>
-                        <input type="file" name="imgUploader" id="imgUploader" style="display: none">
-                    </div>
+							<input type = 'button' class="btn btn-danger rounded-0 btn-block mt-1" id="btnDeletePic"  value = 'حذف' />
+							<form action = 'control/changePhoto.php' method = 'POST' enctype = 'multipart/form-data' >
+								<input type = 'submit' class="btn btn-primary rounded-0 btn-block mt-1" name="changePhoto" value = 'تغییر' />
+								<input type="file"  class="btn btn-primary rounded-0 btn-block mt-1" name="url" >
+							</form>
+					</div>
                 </div>
 
             </div>
@@ -173,6 +173,8 @@ else
     </section>
 
     <script src="assets/js/lib/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/lib/jquery.js"></script>
+    <script src="assets/js/changePhoto.js"></script>
     <script src="assets/js/lib/bootstrap.min.js"></script>
     <script src="assets/js/profile.js"></script>
     <script src="assets/js/checkProfile.js"></script>
