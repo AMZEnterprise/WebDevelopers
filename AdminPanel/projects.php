@@ -1,3 +1,15 @@
+<?php
+session_start();
+if(!isset($_SESSION['username']))
+{
+	header('location:login.html');
+}
+else
+{
+	include('config.php');
+	$db = @mysqli_connect("$host", "$user", "$pass" , "$dbname");
+}
+?>
 <!DOCTYPE html>
 <html dir="rtl" lang="fa-IR">
 
@@ -31,13 +43,13 @@
                 <ul class="nav navbar-nav ml-auto">
                     
                     <li class="nav-item">
-                        <a href="#" class="nav-link dropdown-toggle mr-2" id="userSetting" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i><span id="username">  علی مومن زاده </span> </a>
+                        <a href="#" class="nav-link dropdown-toggle mr-2" id="userSetting" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-user-circle"></i><span id="username"> <?php echo  $_SESSION['username']; ?> </span> </a>
                         <div class="dropdown-menu">
                             <a href="profile.php" class="dropdown-item"><i class="fa fa-edit mr-3"></i>پروفایل</a>
                             <a href="settings.php" class="dropdown-item"><i class="fa fa-cog mr-3"></i>تنظیمات</a>
                         </div>
                     </li>
-                    <li class="nav-item"><a href="login.php" class="nav-link mr-5"><span class="fa fa-sign-out-alt"></span> خروج </a></li>
+                    <li class="nav-item"><a href="control/exit.php" class="nav-link mr-5"><span class="fa fa-sign-out-alt"></span> خروج </a></li>
                 </ul>
             </div>
         </nav>
@@ -72,42 +84,39 @@
                         <thead class="bg-secondary">
                             <tr>
                                 <th><span class="fa fa-sort"></span></th>
-                                <th>نوع</th>
                                 <th>نام</th>
                                 <th>نام خانوادگی</th>
                                 <th>تلفن</th>
                                 <th>ایمیل</th>
                                 <th>توضیحات</th>
+                                <th>فایل پیوستی</th>
                                 <th>تاریخ سفارش</th>
                                 <th>هزینه</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php
-								$con = mysqli_connect("localhost","root","","webdevelopers");
 								$counter = 1;
-								if(! mysqli_connect_error()){
-									
-									$query = "select * from info";
-									$table = mysqli_query($con,$query);
+									$query = "select * from project";
+									$table = mysqli_query($db,$query);
 									while($rows = mysqli_fetch_assoc($table))
 									{
                                         echo "<tr>";
 											echo "<td>" . $counter . "</td>";
-											echo "<td>" . $rows['projectType'] . "</td>";
-                                            echo "<td>" . $rows['firstName'] . "</td>";
-                                            echo "<td>" . $rows['lastName'] . "</td>";
-                                            echo "<td>" . $rows['phoneNumber'] .  "</td>";
+                                            echo "<td>" . $rows['firstname'] . "</td>";
+                                            echo "<td>" . $rows['lastname'] . "</td>";
+                                            echo "<td>" . $rows['phonenumber'] .  "</td>";
                                             echo "<td>" . $rows['email'] . "</td>";
                                             echo "<td>" . $rows['description'] . "</td>";
-											echo "<td>" . " " .  "</td>";
-											echo "<td>" . " " .  "</td>";
+                                            echo "<td>" . $rows['userfile'] . "</td>";
+											echo "<td>" . $rows['date'] .  "</td>";
+											echo "<td>" . $rows['cost'] .  "</td>";
 											
 										echo "</tr>";
 										$counter ++;
 									}
 									
-								}
+								
 						?>
                         </tbody>
                     </table>
@@ -168,20 +177,20 @@
                     <button type="button" class="close" data-dismiss="modal" aria-labelledby="Close"><span class="text-white">&times;</span></button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="POST">
+                    <form action="control/addProject.php" method="POST">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="نام" id="add_firstName">
+                            <input type="text" class="form-control" placeholder="نام" name="add_firstName">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="نام خانوادگی" id="add_LastName">
+                            <input type="text" class="form-control" placeholder="نام خانوادگی" name="add_LastName">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="ایمیل" id="add_email">
+                            <input type="text" class="form-control" placeholder="ایمیل" name="add_email">
                         </div>
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="شماره تماس" id="add_phoneNumber">
+                            <input type="text" class="form-control" placeholder="شماره تماس" name="add_phoneNumber">
                         </div>
-                        <div class="form-group">
+                       <!-- <div class="form-group">
                             <label for="ProjectType">نوع پروژه : </label>
                             <select class="custom-select" id="add_ProjectType">
                                 <option value="webSite" selected="">وبسایت</option>
@@ -190,9 +199,10 @@
                                 <option value="DesktopApp">نرم افزار دسکتاپ</option>
                                 <option value="FullWebApp">وبسایت + وب اپلیکشین</option>
                             </select>
+							-->
                         </div>
                         <div class="form-group">
-                            <textarea name="" id="add_description" cols="30" rows="4" class="form-control" placeholder="توضیحات"></textarea>
+                            <textarea name="" name="add_description" cols="30" rows="4" class="form-control" placeholder="توضیحات"></textarea>
                         </div>
                         <button id="add_btn" type="submit" class="btn btn-success">ثبت پروژه</button>
                     </form>

@@ -9,7 +9,7 @@ if(isset($_POST['deletePhoto']))
 else if(isset($_POST['changePhoto']))
 {
 	
-	if($_FILES['url']['name'] != '')
+	if($_FILES['url']['name'] != '' and ($_FILES['url']['type'] == 'image/png' or $_FILES[''] == 'image/jpeg' ))
 	{
 		$path = '../assets/images/' . $_FILES['url']['name'];
 		move_uploaded_file($_FILES['url']['tmp_name'], $path );
